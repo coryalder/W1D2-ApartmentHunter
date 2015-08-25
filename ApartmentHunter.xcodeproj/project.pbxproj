@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BC9E4631B72492900CAADEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9E4621B72492900CAADEA /* main.m */; };
-		8BC9E46B1B724ABF00CAADEA /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9E46A1B724ABF00CAADEA /* Room.m */; };
+		8B17C7501B8CCE6C00D54F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17C74F1B8CCE6C00D54F23 /* main.m */; };
+		8B17C7581B8CCFDA00D54F23 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17C7571B8CCFDA00D54F23 /* Room.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8BC9E45D1B72492900CAADEA /* CopyFiles */ = {
+		8B17C74A1B8CCE6C00D54F23 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8BC9E45F1B72492900CAADEA /* ApartmentHunter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ApartmentHunter; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BC9E4621B72492900CAADEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8BC9E4691B724ABF00CAADEA /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		8BC9E46A1B724ABF00CAADEA /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		8B17C74C1B8CCE6C00D54F23 /* ApartmentHunter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ApartmentHunter; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B17C74F1B8CCE6C00D54F23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B17C7561B8CCFDA00D54F23 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		8B17C7571B8CCFDA00D54F23 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8BC9E45C1B72492900CAADEA /* Frameworks */ = {
+		8B17C7491B8CCE6C00D54F23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,28 +41,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8BC9E4561B72492900CAADEA = {
+		8B17C7431B8CCE6C00D54F23 = {
 			isa = PBXGroup;
 			children = (
-				8BC9E4611B72492900CAADEA /* ApartmentHunter */,
-				8BC9E4601B72492900CAADEA /* Products */,
+				8B17C74E1B8CCE6C00D54F23 /* ApartmentHunter */,
+				8B17C74D1B8CCE6C00D54F23 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8BC9E4601B72492900CAADEA /* Products */ = {
+		8B17C74D1B8CCE6C00D54F23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BC9E45F1B72492900CAADEA /* ApartmentHunter */,
+				8B17C74C1B8CCE6C00D54F23 /* ApartmentHunter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BC9E4611B72492900CAADEA /* ApartmentHunter */ = {
+		8B17C74E1B8CCE6C00D54F23 /* ApartmentHunter */ = {
 			isa = PBXGroup;
 			children = (
-				8BC9E4621B72492900CAADEA /* main.m */,
-				8BC9E4691B724ABF00CAADEA /* Room.h */,
-				8BC9E46A1B724ABF00CAADEA /* Room.m */,
+				8B17C74F1B8CCE6C00D54F23 /* main.m */,
+				8B17C7561B8CCFDA00D54F23 /* Room.h */,
+				8B17C7571B8CCFDA00D54F23 /* Room.m */,
 			);
 			path = ApartmentHunter;
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BC9E45E1B72492900CAADEA /* ApartmentHunter */ = {
+		8B17C74B1B8CCE6C00D54F23 /* ApartmentHunter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BC9E4661B72492A00CAADEA /* Build configuration list for PBXNativeTarget "ApartmentHunter" */;
+			buildConfigurationList = 8B17C7531B8CCE6C00D54F23 /* Build configuration list for PBXNativeTarget "ApartmentHunter" */;
 			buildPhases = (
-				8BC9E45B1B72492900CAADEA /* Sources */,
-				8BC9E45C1B72492900CAADEA /* Frameworks */,
-				8BC9E45D1B72492900CAADEA /* CopyFiles */,
+				8B17C7481B8CCE6C00D54F23 /* Sources */,
+				8B17C7491B8CCE6C00D54F23 /* Frameworks */,
+				8B17C74A1B8CCE6C00D54F23 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -84,54 +84,54 @@
 			);
 			name = ApartmentHunter;
 			productName = ApartmentHunter;
-			productReference = 8BC9E45F1B72492900CAADEA /* ApartmentHunter */;
+			productReference = 8B17C74C1B8CCE6C00D54F23 /* ApartmentHunter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8BC9E4571B72492900CAADEA /* Project object */ = {
+		8B17C7441B8CCE6C00D54F23 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Cory Alder";
 				TargetAttributes = {
-					8BC9E45E1B72492900CAADEA = {
+					8B17C74B1B8CCE6C00D54F23 = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
-			buildConfigurationList = 8BC9E45A1B72492900CAADEA /* Build configuration list for PBXProject "ApartmentHunter" */;
+			buildConfigurationList = 8B17C7471B8CCE6C00D54F23 /* Build configuration list for PBXProject "ApartmentHunter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 8BC9E4561B72492900CAADEA;
-			productRefGroup = 8BC9E4601B72492900CAADEA /* Products */;
+			mainGroup = 8B17C7431B8CCE6C00D54F23;
+			productRefGroup = 8B17C74D1B8CCE6C00D54F23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BC9E45E1B72492900CAADEA /* ApartmentHunter */,
+				8B17C74B1B8CCE6C00D54F23 /* ApartmentHunter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8BC9E45B1B72492900CAADEA /* Sources */ = {
+		8B17C7481B8CCE6C00D54F23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BC9E46B1B724ABF00CAADEA /* Room.m in Sources */,
-				8BC9E4631B72492900CAADEA /* main.m in Sources */,
+				8B17C7581B8CCFDA00D54F23 /* Room.m in Sources */,
+				8B17C7501B8CCE6C00D54F23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8BC9E4641B72492A00CAADEA /* Debug */ = {
+		8B17C7511B8CCE6C00D54F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -173,7 +173,7 @@
 			};
 			name = Debug;
 		};
-		8BC9E4651B72492A00CAADEA /* Release */ = {
+		8B17C7521B8CCE6C00D54F23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,14 +208,14 @@
 			};
 			name = Release;
 		};
-		8BC9E4671B72492A00CAADEA /* Debug */ = {
+		8B17C7541B8CCE6C00D54F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8BC9E4681B72492A00CAADEA /* Release */ = {
+		8B17C7551B8CCE6C00D54F23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -225,24 +225,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8BC9E45A1B72492900CAADEA /* Build configuration list for PBXProject "ApartmentHunter" */ = {
+		8B17C7471B8CCE6C00D54F23 /* Build configuration list for PBXProject "ApartmentHunter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BC9E4641B72492A00CAADEA /* Debug */,
-				8BC9E4651B72492A00CAADEA /* Release */,
+				8B17C7511B8CCE6C00D54F23 /* Debug */,
+				8B17C7521B8CCE6C00D54F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BC9E4661B72492A00CAADEA /* Build configuration list for PBXNativeTarget "ApartmentHunter" */ = {
+		8B17C7531B8CCE6C00D54F23 /* Build configuration list for PBXNativeTarget "ApartmentHunter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BC9E4671B72492A00CAADEA /* Debug */,
-				8BC9E4681B72492A00CAADEA /* Release */,
+				8B17C7541B8CCE6C00D54F23 /* Debug */,
+				8B17C7551B8CCE6C00D54F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8BC9E4571B72492900CAADEA /* Project object */;
+	rootObject = 8B17C7441B8CCE6C00D54F23 /* Project object */;
 }

@@ -2,7 +2,7 @@
 //  Room.h
 //  ApartmentHunter
 //
-//  Created by Cory Alder on 2015-08-05.
+//  Created by Cory Alder on 2015-08-25.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
@@ -12,20 +12,23 @@
 
 @property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, assign) float windowHeight;
-@property (nonatomic, assign) float windowWidth;
-
 @property (nonatomic, assign) float height;
 @property (nonatomic, assign) float width;
 @property (nonatomic, assign) float depth;
 
--(float)windowArea;
+@property (nonatomic, assign) float windowHeight;
+@property (nonatomic, assign) float windowWidth;
+
+
 -(float)squareFootage;
+-(float)windowArea;
+
 
 -(float)score;
 
--(BOOL)brighterThan:(Room *)otherRoom;
+-(BOOL)isBrighterThan:(Room *)otherRoom;
 
--(Room *)brightest:(Room *)otherRoom;
+-(Room *)brightestOf:(Room *)otherRoom;
+
 
 @end
