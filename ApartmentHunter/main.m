@@ -2,8 +2,8 @@
 //  main.m
 //  ApartmentHunter
 //
-//  Created by Cory Alder on 2015-08-25.
-//  Copyright (c) 2015 Cory Alder. All rights reserved.
+//  Created by Cory Alder on 2016-01-12.
+//  Copyright © 2016 Cory Alder. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,113 +13,115 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         
-        // room 1
-//        float windowHeight = 10;
-//        float windowWidth = 8;
-//        
-//        float roomHeight = 11;
-//        float roomWidth = 12;
-//        float roomDepth = 20;
-//        
-//        float windowArea = windowHeight * windowWidth;
-//        float squareFootage = roomHeight * roomWidth * roomDepth;
-//        
-//        float score = windowArea / squareFootage;
+        // brightness score = windowArea / roomArea
+        
+        float windowHeight = 10;
+        float windowWidth = 8;
+        
+        float roomWidth = 12;
+        float roomDepth = 14;
+        
+        float roomArea = roomDepth * roomWidth;
+        float windowArea = windowWidth * windowHeight;
+        
+        float brightnessScore = windowArea / roomArea;
+        
+        NSLog(@"The room is %0.2f bright", brightnessScore);
         
         
-        Room *room1 = [[Room alloc] init];
+        float window2Height = 10;
+        float window2Width = 8;
         
-        room1.name = @"Room 1";
+        float room2Width = 12;
+        float room2Depth = 14;
         
-        room1.windowHeight = 10;
-        room1.windowWidth = 8;
+        float room2Area = room2Depth * room2Width;
+        float window2Area = window2Width * window2Height;
         
-        room1.height = 11;
-        room1.width = 12;
-        room1.depth = 20;
+        float brightnessScore2 = window2Area / room2Area;
         
-        
-        // room 2
+        NSLog(@"The room is %0.2f bright", brightnessScore2);
         
         
-        Room *room2 = [[Room alloc] init];
+        Room *room3 = [[Room alloc] init];
+        room3.name = @"Room 3";
+        room3.windowHeight = 12;
+        room3.windowWidth = 5;
         
-        room2.name = @"Room 2";
+        room3.width = 20;
+        room3.depth = 6;
         
-        room2.height = 11;
-        room2.width = 12;
-        room2.depth = 15;
+        float room3score = [room3 brightnessScore];
         
-        room2.windowWidth = 10;
-        room2.windowHeight = 10;
+//        [room3 windowArea] // private!
         
-        if ([room1 isEqual:room2]) {
-            
+        NSLog(@"room3 score is %0.2f", room3score);
+        
+        Room *room4 = [[Room alloc] init];
+        room4.name = @"Room 4";
+        room4.windowHeight = 12;
+        room4.windowWidth = 14;
+        
+        room4.width = 20;
+        room4.depth = 20;
+        
+        
+        BOOL room3IsBrighter = [room3 brighterThan:room4];
+        
+        if (room3IsBrighter) {
+            NSLog(@"Room 3 is brighter");
+        } else {
+            NSLog(@"Room 4 is brighter");
         }
         
-        Room *brightestRoom = [room1 brightestOf:room2];
+        
+        Room *brightestRoom = [room3 brightestOf:room4];
         
         NSLog(@"The brightest room is %@", brightestRoom.name);
         
-//        float score2 = [room2 windowArea] / [room2 squareFootage];
-        
-//        NSLog(@"Room 1 score is %f", [room1 score]);
-//        NSLog(@"Room 2 score is %f", [room2 score]);
-//        
-//        //if ([room1 score] > [room2 score]) {
-//        if ([room1 isBrighterThan:room2]) {
-//            NSLog(@"Room1 is the brightest");
-//        } else {
-//            NSLog(@"Room2 is the brightest");
-//        }
         
         
-        NSString *aString = [[NSString alloc] init];
-        NSString *anotherString = @"";
+        NSArray *rooms = @[room3, room4];
+        // [[NSArray alloc] initWithObjects:room3, room4, nil]; // bad!
         
-        NSArray *twoRooms = [[NSArray alloc] init];
-        
-        twoRooms = [twoRooms arrayByAddingObject:room1];
-        twoRooms = [twoRooms arrayByAddingObject:room2];
-        
-        NSLog(@"I have %lu rooms", (unsigned long)[twoRooms count]);
-        
-        for (Room *aRoom in twoRooms) {
-            
-            NSLog(@"%@ has a brightness score of %f", aRoom.name, [aRoom score]);
-            
-        }
-        
-        
-        NSMutableArray *rooms = [@[room1, room2] mutableCopy];
-//        [rooms addObject:room1];
-//        [rooms addObject:room2];
-        
-        for (int i = 0; i < 10; i++) {
-            
-            Room *newRoom = [[Room alloc] init];
-            newRoom.height = 1 + arc4random_uniform(10);
-            newRoom.width = 1 + arc4random_uniform(10);
-            newRoom.depth = 1 + arc4random_uniform(10);
-            
-            newRoom.windowHeight = 1 + arc4random_uniform(10);
-            newRoom.windowWidth = 1 + arc4random_uniform(10);
-            
-            newRoom.name = [NSString stringWithFormat:@"Room %d", i];
-            
-            [rooms addObject:newRoom];
-        }
-        
-        Room *realBrightestRoom = [rooms firstObject];
         
         for (Room *aRoom in rooms) {
-            realBrightestRoom = [realBrightestRoom brightestOf:aRoom];
-            NSLog(@"%@ has a brightness score of %f", aRoom.name, [aRoom score]);
+            NSLog(@"%@ has a score of %f", aRoom.name, [aRoom brightnessScore]);
         }
         
         
+        NSMutableArray *mutableRooms = [[NSMutableArray alloc] init];
         
-        NSLog(@"The brightest room in the large array is %@", realBrightestRoom.name);
+        for (int i = 0; i < 10; i++) {
+            Room *newRoom = [[Room alloc] init];
+            newRoom.windowHeight = 1 + arc4random_uniform(50);
+            newRoom.windowWidth = 1 + arc4random_uniform(50);
+            
+            newRoom.width = 1 + arc4random_uniform(50);
+            newRoom.depth = 1 + arc4random_uniform(50);
+            
+            newRoom.name = [NSString stringWithFormat:@"Room %i", i+1];
+            
+            [mutableRooms addObject:newRoom];
+            
+        }
+        
+        
+        for (Room *aRoom in mutableRooms) {
+            NSLog(@"%@ has a score of %f", aRoom.name, [aRoom brightnessScore]);
+        }
+        
+        
+        Room *brightest = [mutableRooms firstObject];
+        
+        for (Room *aRoom in mutableRooms) {
+            brightest = [aRoom brightestOf:brightest];
+        }
+        
+        NSLog(@"The brightest room is %@", brightest.name);
+        
+        
+        
         
     }
     return 0;

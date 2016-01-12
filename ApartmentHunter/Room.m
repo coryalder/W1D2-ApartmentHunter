@@ -2,40 +2,48 @@
 //  Room.m
 //  ApartmentHunter
 //
-//  Created by Cory Alder on 2015-08-25.
-//  Copyright (c) 2015 Cory Alder. All rights reserved.
+//  Created by Cory Alder on 2016-01-12.
+//  Copyright © 2016 Cory Alder. All rights reserved.
 //
 
 #import "Room.h"
 
-@implementation Room
 
--(float)squareFootage {
-    return self.height * self.width * self.depth;
-}
+@implementation Room
 
 
 -(float)windowArea {
-    return self.windowHeight * self.windowWidth;
+    return self.windowWidth * self.windowHeight;
 }
 
 
--(float)score {
-    return [self windowArea] / [self squareFootage]; 
+-(float)area {
+    return self.width * self.depth;
+}
+
+-(float)brightnessScore {
+    
+//    float score =  / self.width * self.depth;
+    
+    return  [self windowArea] / [self area];
+
+}
+
+-(BOOL)brighterThan:(Room *)otherRoom {
+    return [otherRoom brightnessScore] < [self brightnessScore];
 }
 
 
--(BOOL)isBrighterThan:(Room *)otherRoom {
-    return [self score] > [otherRoom score];
-}
 
-
--(Room *)brightestOf:(Room *)otherRoom {
-    if ([self isBrighterThan:otherRoom]) {
+-(Room *)brightestOf:(Room*)otherRoom {
+    if ([self brighterThan:otherRoom]) {
         return self;
     } else {
         return otherRoom;
     }
 }
+
+
+
 
 @end
